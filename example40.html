@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>New Input Elements</title>
+</head>
+<body>
+	  <h2>Date Field</h2>
+	  <p>The <strong>input type="date"</strong> is used for input fields that should contain a date.</p>
+	  <form action="">
+	  <label for="birthday">Date of Birth:</label>
+	  <input type="date" id="doB" name="doB">
+	  <input type="submit" value="Submit">
+	  </form>
+
+	  <h2>Date Field Restrictions</h2>
+	  <p>Use the min and max attributes to add restrictions to dates:</p>
+
+	  <form action="/action_page.php">
+	  <label for="datemax">Enter a date before 1980-01-01:</label>
+	  <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+	  <label for="datemin">Enter a date after 2000-01-01:</label>
+	  <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+   	  <input type="submit" value="Submit">
+	  </form>
+
+	  <h2>Local Date Field</h2>
+	  <p>The <strong>input type="datetime-local"</strong> specifies a date and time input field, with no time zone.</p>
+
+	  <form action="/action_page.php">
+	  <label for="birthdaytime">Birthday (date and time):</label>
+	  <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+	  <input type="submit" value="Submit">
+	  </form>
+	  
+	  <h2>Month Field</h2>
+	  <p>The <strong>input type="month"</strong> allows the user to select a month and year.</p>
+
+	  <form action="/action_page.php">
+	  <label for="bdaymonth">Birthday (month and year):</label>
+	  <input type="month" id="bdaymonth" name="bdaymonth">
+	  <input type="submit" value="Submit">
+	  </form>
+
+	  <form action="/action_page.php">
+	  <label for="week">Select a week:</label>
+	  <input type="week" id="week" name="week">
+	  <input type="submit" value="Submit">
+	  </form>
+
+</body>
+</html>
