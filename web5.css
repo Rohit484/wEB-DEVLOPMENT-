@@ -1,0 +1,10 @@
+body{background-color: yellowgreen;}
+h3{background-color: tomato; text-align: justify; font-size: medium; font-family: 'Courier New', Courier, monospace;}
+p{text-overflow: ellipsis; font-weight: 200; background-color: steelblue;}
+h4{background-color: sienna; text-align: justify; font-size: medium; font-family: 'Courier New', Courier, monospace;}
+h1{background-color: antiquewhite; text-align: justify; font-size: medium; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+h2{background-color: antiquewhite; text-align: center; font-size: larger; font-weight: 200; font-family: 'Times New Roman', Times, serif;}
+table{background-color: blue; }
+td{color: seagreen;font-stretch: narrower;}
+th{color: brown;}
+nav{background-color: rgb(red, green, blue); font-style: italic; font-size: medium; font-weight: 500;}
