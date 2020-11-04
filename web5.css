@@ -8,3 +8,20 @@ table{background-color: blue; }
 td{color: seagreen;font-stretch: narrower;}
 th{color: brown;}
 nav{background-color: rgb(red, green, blue); font-style: italic; font-size: medium; font-weight: 500;}
+ul{list-style-type: disc; margin: 0%; padding: 0%;}
+li{float: left;}
+a{
+    display: block;
+    padding: 8px;
+    background-color: blue;
+    color: chartreuse;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: tomato;
+}
+.active{
+    background-color: slategray;
+}
