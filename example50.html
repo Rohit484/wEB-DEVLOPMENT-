@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title> 
+			CSS | animation-timing-function Property 
+		</title> 
+		<style> 
+			.ace { 
+				font-size: 40px; 
+				text-align:center; 
+				font-weight:bold; 
+				color:#090; 
+				padding-bottom: 5px; 
+				font-family:Times New Roman; 
+			} 
+			
+			.ace1 { 
+				font-size:17px; 
+				font-weight:bold; 
+				text-align:center; 
+				font-family:Times New Roman; 
+			} 
+			
+			h2 { 
+				width: 350px; 
+				animation-name: text; 
+				animation-duration: 4s; 
+				animation-iteration-count: infinite; 
+				background-color: rgb(255, 210, 85); 
+			} 
+			
+			#one { 
+				animation-timing-function: ease; 
+			} 
+			
+			#two { 
+				animation-timing-function: linear; 
+			} 
+			
+			#three { 
+				animation-timing-function: ease-in; 
+			} 
+			
+			#four { 
+				animation-timing-function: ease-out; 
+			} 
+			
+			#five { 
+				animation-timing-function: ease-in-out; 
+			} 
+			
+			@keyframes text { 
+				from { 
+					margin-left: 60%; 
+				} 
+				to { 
+					margin-left: 0%; 
+				} 
+			} 
+		</style> 
+	</head> 
+	<body> 
+		<div class = "ace"> 
+		Aptech Computer Education 
+		</div> 
+		
+		<div class = "ace1"> 
+			A programming and training institute   
+		</div> 
+		
+		<!-- For this the animation-timing-function will 
+			be set to ease -->
+		<h2 id="one"> 
+			This text is ease. 
+		</h2> 
+		
+		<!-- For this animation-timing-function will 
+			be set to linear -->
+		<h2 id="two"> 
+			This text is linear. 
+		</h2> 
+		
+		<!-- For this animation-timing-function will 
+			be set to ease-in -->
+		<h2 id="three"> 
+			This text is ease-in. 
+		</h2> 
+		
+		<!-- For this animation-timing-function will 
+			be set to ease-out -->
+		<h2 id="four"> 
+			This text is ease-out. 
+		</h2> 
+		
+		<!-- For this animation-timing-function will 
+			be set to ease-in-out -->
+		<h2 id="five"> 
+			This text is ease-in-out. 
+		</h2> 
+	</body> 
+</html>									 

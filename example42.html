@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>
+        CSS animation -timing-function-property
+    </title>
+    <style>
+        .ace {
+            font-size: 40px;
+            text-align: center;
+            font-weight: bold;
+            color: #090;
+            padding-bottom: 5px;
+            font-family: Times New Roman;
+        }
+        
+        .ace1 {
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+            font-family: Times New roman;
+        }
+        
+        h2 {
+            width: 350px;
+            animation-name: text;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            background-color: rgb(250, 210, 85);
+        }
+        
+        #one {
+            animation-timing-function: ease;
+        }
+        
+        #two {
+            animation-timing-function: ease-in;
+        }
+        
+        #three {
+            animation-timing-function: ease-in-out;
+        }
+        
+        #four {
+            animation-timing-function: ease-out;
+        }
+        
+        #five {
+            animation-timing-function: linear;
+        }
+        
+        @keyframes text {
+            from {
+                margin-right: 0%;
+            }
+            to {
+                margin-left: 60%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ace">
+        Aptech Computer education
+    </div>
+    <div class="ace1">
+        A programming and training institute
+    </div>
+    <!----for this is the animation timing function will be set to ease -->
+    <h2 id="one">
+        this text is ease
+    </h2>
+    <h2 id="two">
+        this text is ease in
+    </h2>
+    <h2 id="three">
+        this text is ease out
+    </h2>
+    <h2 id="four">
+        this text is ease in out
+    </h2>
+    <h2 id="five">
+        this text is linear
+    </h2>
+</body>
+
+</html>

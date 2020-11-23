@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>CSS animation-iteration-count property</title>
+    <style>
+        .ace {
+            font-size: 40px;
+            text-align: center;
+            font-weight: bold;
+            color: #090;
+            padding-bottom: 5px;
+            font-family: Times new roman;
+        }
+        
+        .ace1 {
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+            font-family: times new roman;
+        }
+        
+        #one {
+            animation-name: text;
+            animation-duration: 2s;
+        }
+        
+        #two {
+            animation-name: text;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes text {
+            from {
+                background-color: orange;
+            }
+            to {
+                background-color: greenyellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ace">
+        Aptech computer education
+    </div>
+    <div class="ace1">
+        Computer training
+    </div>
+    <h2 id="one">
+        this is text change its color two lines
+    </h2>
+    <h2 id="two">
+        this text changes its color infinite times
+    </h2>
+</body>
+
+</html>

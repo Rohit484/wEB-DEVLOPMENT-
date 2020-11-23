@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title> 
+			CSS | animation-iteration-count Property 
+		</title> 
+		<style> 
+			.ace { 
+				font-size: 40px; 
+				text-align:center; 
+				font-weight:bold; 
+				color:#090; 
+				padding-bottom:5px; 
+				font-family:Times New Roman; 
+			} 
+			
+			.ace1 { 
+				font-size:17px; 
+				font-weight:bold; 
+				text-align:center; 
+				font-family:Times New Roman; 
+			} 
+			
+			#one { 
+				animation-name: example; 
+				animation-duration: 2s; 
+				
+				/* Animation will be repeated twice */ 
+				animation-iteration-count: 2; 
+			} 
+			
+			#two { 
+				animation-name: example; 
+				animation-duration: 2s; 
+				
+				/* Animation will be repeated infinitely */ 
+				animation-iteration-count: infinite; 
+			} 
+			@keyframes example { 
+				from { 
+					background-color: orange; 
+				} 
+				to { 
+					background-color: white; 
+				} 
+			} 
+		</style> 
+	</head> 
+	<body> 
+		<div class = "ace"> 
+			Aptech Computer Education 
+		</div> 
+		
+		<div class = "ace1"> 
+			Computer Training
+		</div> 
+		
+		<!-- Animation of the text inside the h2 tag 
+			below will be repeated twice only -->
+		<h2 id="one"> 
+			This text changes its color two times. 
+		</h2> 
+		
+		<!-- Animation of the text inside the h2 tag 
+			below will be repeated infinitely -->
+		<h2 id="two"> 
+			This text changes its color infinite times. 
+		</h2> 
+	</body> 
+</html>													 
