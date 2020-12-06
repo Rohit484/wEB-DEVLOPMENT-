@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+	</head>
+  <script lang="JavaScript" type="text/javascript">	
+	function func1()
+	{
+	nm=document.getElementById('nm').value;
+	//document.write("<h1 align='center'>WELCOME " ,nam,"</h1>");
+	fnt_nm=document.getElementById('ft1').value;
+	fnt_color=document.getElementById('ft2').value;
+	fnt_sz=document.getElementById('ft3').value;
+	document.write("<font face='",fnt_nm,"' color='",fnt_color,"' size='",fnt_sz,"'>Hello " ,nm,"</font>");
+	}
+	</script>
+
+<body>
+Enter Your User Name
+<input type="text" id="nm" placeholder="enter username" />
+Choose a font 
+<input type="text" id="ft1" placeholder="enter fontname" />
+<input type="text" id="ft2" placeholder="enter colorname" />
+<input type="text" id="ft3" placeholder="enter size" />
+<input type="button" onclick="func1()" value="login" />
+
+  </body>
+</html>

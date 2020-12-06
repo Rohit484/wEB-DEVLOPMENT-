@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Fri, 04 Dec 2020 11:57:17 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<style>
+	div{background-color:#80FFFF;
+	padding:50px;
+	width:500px;
+	height:400px;
+	 }
+	</style>
+	<script>
+	function total()
+	{
+	rt =parseInt(r.value);
+	qty=parseInt(q.value);
+	ttl=rt*qty;
+	//t.value=ttl;
+	document.write("<table><tr><td colspan=2><h1>Cake & Bakeries</h1></td></tr><tr><td>Rate</td><td>",rt,"</td></tr><tr><td>Quantity</td><td>",qty,"</td></tr><tr><td>Please Pay Rs.</td><td>",ttl,"</td></tr></table>");
+	}
+	</script>
+  </head>
+  <body>
+  <div>
+<h1>Cake & Bakeries</h1>
+Rate of 1 cake <input type="text" name="r" value="400" disabled>
+<br	/>  
+Enter quantity(in pounds)<input type="text" name="q" placeholder="enter quantity" />
+<br />
+rate of 1 kg biscuits 300
+
+<input type="button" value="click here" onclick="total()"/>
+
+<input type="text" name="t" disabled />
+</div>
+</body>
+</html>
+1.  

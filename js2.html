@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Tue, 01 Dec 2020 11:35:02 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<script>
+	//	int integer  whole number
+	//float decimal
+	//	char single character $ s 2
+	a=10;
+	b=20;
+	c=a+b;	 
+	document.write(c); // to print anything
+	document.write("<br>",c);
+	document.write("<h1 align='center'>The sum of a and b is ",c);
+	document.write(".................</h1>");
+	</script>
+
+	<script lang="javascript" type="text/javascript">
+	function func1()
+	{
+		nam=nm.value;
+		no1=parseInt(n1.value);
+		no2=parseInt(n2.value);
+		sum=no2+no1;
+		document.write("Addition ", sum, nam);
+		document.bgColor="#FF0000";
+		
+	}
+	
+	function func2()
+	{
+
+	no1=parseInt(n1.value);
+	no2=parseInt(n2.value);
+	diff=no2-no1;
+	document.write("Difference ", diff);
+	}
+	
+	function total()
+	{
+	sst=parseFloat(m1.value);
+	sci=parseFloat(m2.value);
+	maths=parseFloat(m3.value);
+	result=(sst+sci+maths)/3;
+	alert("Result"+result);
+	}
+	</script>
+  </head>
+  <body>
+   <h1>Calculator</h1>
+   <input type="text" name="nm" />
+   Enter 1st number
+   <input type="text" name="n1" />
+   Enter 2nd number
+   <input type="text" name="n2" />
+   <input type="button" value="+" onclick="func1()" />
+   <input type="button" value="-" onClick="func2()" />
+   <hr />
+  <h1>Average</h1>
+   Enter marks for Social Studies
+   <input type="text" name="m1" />
+   Enter marks for Science
+   <input type="text" name="m2" />
+   Enter marks for Maths
+   <input type="text" name="m3" />
+   <input type="button" value="Click Here" onclick="total()" />
+   </body>
+   
+</html>
