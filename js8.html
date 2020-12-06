@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <title></title>
+    <script>
+        a = 20;
+        b = 30;
+        c = a + b;
+        document.write(c);
+        document.write("<br>", c);
+        dokcument.write("<h1 align='center'>The sum of a and b is ", c);
+    </script>
+    <script lang="javascript" type="text/javascript">
+        function fun1() {
+            nam = nm.value;
+            no1 = parseInt(n1.value);
+            no2 = parseInt(n2.value);
+            sum = no1 + no2;
+            document.write("Addition ", sum, nam);
+            document.bgColor = "#FF0000";
+        }
+
+        function fun2() {
+            no1 = parseInt(n1.value);
+            no2 = parseInt(n2.value);
+            diff = no2 - no1;
+            document.write("Difference ", diff);
+
+
+        }
+
+        function total()
+        sst = parseFloat(m1.value);
+        Sci = parseFloat(m2.value);
+        maths = parseFloat(m3.value);
+        result = parseFloat(sst + sci + maths) / 3;
+        alert("Result" + result);
+    </script>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    Enter first number
+    <input type="text" name="n1"> Enter second number
+    <input type="text" name="n2">
+    <input type="button" value="+" onclick="fun1()">
+    <input type="button" value="-" onclick="fun2()">
+    <hr/>
+    <h1>Average</h1>
+    Enter marks for social studies
+    <input type="text" name="m1"> Enter marks for Science
+    <input type="text" name="m2"> Enter marks for maths
+    <input type="text" name="m3">
+    <input type="button" value="Click here" onclick="total()">
+
+</body>
+
+</html>
