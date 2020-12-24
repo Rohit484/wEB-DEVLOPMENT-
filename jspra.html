@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Sat, 05 Dec 2020 14:26:14 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<style>
+	div{width:400px;height:auto; float:left;padding:20px;}
+	input[type=text] {
+	  width: 100%;
+	  padding: 12px 20px;
+	  margin: 8px 0;
+	  display: inline-block;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+}
+	</style>
+	<script>
+	function c_to_f()
+	{
+	//Celsius to Fahrenheit, multiply by 1.8 (or 9/5) and add 32.
+	cel1 = parseFloat(c.value);
+	far1 = (cel1 * 9 / 5) + 32;
+	f.value=far1;
+	}
+	
+	function f_to_c()
+	{ 
+	//T(°C) = (T(°F) - 32) × 5/9
+	far2=parseFloat(f1.value);
+	cel2= (far2-32) * 5/9;
+	c1.value=cel2;
+	}
+	</script>
+    
+	
+  </head>
+  <body>
+<div>
+<h1>Celsius to Fahrenheit</h1>
+<hr />
+<i>Celsius to Fahrenheit, multiply by 1.8 (or 9/5) and add 32.</i>
+Enter T(°C)<input type="text" name="c" />
+<input type="button" onclick="c_to_f()" value="Click to convert °C to °F" />
+<input type="text" name="f" />
+<hr /> 
+</div>
+<div>
+<h1>Fahrenheit to Celsius</h1>
+<hr />
+<i>The temperature T in degrees Celsius (°C) is equal to the temperature T in degrees Fahrenheit (°F) minus 32, times 5/9:</i>
+Enter T(°F)<input type="text" name="f1" />
+<input type="button" onclick="f_to_c()" value="Click to convert °F to °C" />
+<input type="text" name="c1" />
+  <hr />
+</div>
+</body>
+</html>
