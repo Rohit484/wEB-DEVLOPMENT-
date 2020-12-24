@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Thu, 10 Dec 2020 11:09:01 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<script>
+	function check()
+	{
+	score=0;
+	if(q1[1].checked==1)
+	{
+	score+=10;//score=score+10;
+	}
+	else
+	{
+	score-=5;//score=score+10;
+	}
+	
+	alert("Your score is"+score);
+	}
+	</script>
+	<style>
+	ol { background: #ff9999;  padding: 20px;}
+	ol li {  background: #ffe5e5;  padding: 5px;  margin-left: 35px;}
+	
+	</style>
+  </head>
+  <body>
+  <h1>Online Kon Banega 1000pati?</h1>
+  <ol>
+  <li>What is the capital of Italy?
+  <br />
+  <input type="radio" name="q1" />Milan  q1[0]
+  <input type="radio" name="q1" />Rome	 q1[1]
+  <input type="radio" name="q1" />Paris  q1[2]
+  <input type="radio" name="q1" />Amsterdam q1[3]
+  </li>
+  
+  <li>What is the currency of Bangladesh?
+  <br />
+  <input type="radio" name="q2" />Rouble
+  <input type="radio" name="q2" />Rupee
+  <input type="radio" name="q2" />Taka
+  <input type="radio" name="q2" />Yen
+  </li>
+  </ol>
+  <input type="button" value="Check Your Score" onclick="check()" />
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Thu, 10 Dec 2020 11:56:32 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<style>
+	div{float:left; background-color:#FBD9F9;padding:15px;width:auto;
+	height:auto; 
+	font-family:fantasy;
+	vertical-align:middle;border-radius: 10px;}
+	#main1{width:100%; background-color:#C5F5FA;font-family:fantasy; }
+	input[type=text] {
+	  width: 100%;
+	  padding: 12px 20px;
+	  margin: 8px 0;
+	  display: inline-block;
+	  border: 1px solid #ccc;
+	  border-radius: 10px;
+	  box-sizing: border-box;
+	  }
+	 img{width:350px;height:350px; }
+	  h1{font-size:50px; }
+	</style>
+	<script>
+	function f1()
+	{
+	total=0;
+	if(bake[0].checked==1)
+	total=total+(parseInt(bake[0].value)*parseInt(qty1.value));
+	
+	if(bake[1].checked==1)
+		total=total+(parseInt(bake[1].value)*parseInt(qty2.value));
+	
+	if(bake[2].checked==1)
+		total=total+(parseInt(bake[0].value)*parseInt(qty3.value));
+	
+	alert("Please pay Rs."+total);	
+	}
+	</script>
+  </head>
+  <body>
+<div id="main1">  <h1>Product List</h1></div>
+  <div><img src="../images/USP1.png" /></div>
+  <div>
+  <table border="0"  width="100%">
+  <tr><!-- Row 1 -->
+     <td>Click below</td><!-- Col 1 -->
+     <td>Product List</td><!-- Col 2 -->
+     <td>Enter Quantity Ordered</td><!-- Col 3 -->
+  </tr>
+  <tr><!-- Row 2 -->
+     <td><input type="checkbox" name="bake" value="500" /></td><!-- Col 1 -->
+     <td>1 cake Rs.500/-</td><!-- Col 2 -->
+     <td><input type="text" name="qty1" /></td><!-- Col 3 -->
+  </tr>
+  <tr><!-- Row 3 -->
+     <td><input type="checkbox" name="bake" value="300" /></td><!-- Col 1 -->
+     <td>6 muffins Rs.300/-</td><!-- Col 2 -->
+     <td><input type="text" name="qty2" /></td><!-- Col 3 -->
+  </tr>
+  <tr><!-- Row 4 -->
+     <td>  <input type="checkbox" name="bake" value="400" /></td><!-- Col 1 -->
+     <td>1 kg biscuits Rs.400/-</td><!-- Col 2 -->
+     <td><input type="text" name="qty3" /></td><!-- Col 3 -->
+  </tr>
+</table>
+  <input type="button" value="Click Here" onclick="f1()" />
+  </div>
+  <div><img src="../images/baking-business-ideas.jpg" /></div>
+  </body>
+</html>

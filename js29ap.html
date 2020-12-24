@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Mon, 21 Dec 2020 11:48:11 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+  </head>
+  <body>
+  <script>
+  a=11;
+  do
+  {
+  document.write("a =",a);
+  a++;
+  }while(a<=10);
+  </script>
+  <script>
+  /*
+  do
+  {
+  num=parseInt(prompt("Enter a number to find its square?"));
+  sq=num*num;
+  document.write("Square of ",num ," = ",sq);
+  ans=prompt("Do you want to continue?");
+  }while(ans!='n');
+  */
+ 
+  
+//  Nested loops
+  i=0;
+  for(i=0;i<=4;i++)
+  {
+   	document.write("<br />Hello");
+  		for(j=0;j<=4;j++)
+  		{
+   		document.write("Everyone!!! ");
+  		}
+  }
+ //tables 1 to 5 
+  for(x=1;x<=5;x++)
+  {
+   //document.write("<hr>Table of ",x);
+	   for(y=1;y<=10;y++)
+	   {
+	   document.write(x ," X ", y, " = ",x*y);
+   	   document.write("<br />");
+	   }
+  }
+  
+  no1=parseInt(prompt("Enter starting number"));
+  no2=parseInt(prompt("Enter ending number"));
+  for(x=no1;x<=no2;x++)
+  {
+   document.write("<hr>Table of ",no1);
+	   for(y=1;y<=10;y++)
+	   {
+	   document.write(x ," X ", y, " = ",x*y);
+   	   document.write("<br />");
+	   }
+  }
+  </script>
+  </body>
+</html>

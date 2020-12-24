@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Mon, 14 Dec 2020 11:35:38 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<script>
+	function vowel()
+	{
+	l1=l.value;
+	switch(l1)
+	{
+	case 'A': 
+	case 'a': 
+	case 'E': 
+	case 'e':
+	case 'I':
+	case 'i': 
+	case 'O':
+	case 'o': 
+	case 'U':
+	case 'u': document.write("This is a vowel");
+		 	  break;
+	default : document.write("This is a consonant");
+		 	  break;
+	}
+	
+	}
+	
+	</script>
+  </head>
+  <body>
+  <pre>
+  switch(variable)
+  {
+  case 'A' : d.w("Grade A means");
+  	   	   	 break;
+  case 'B' : d.w("Grade B means");
+  	   	   	 break;
+  default : d.w("Invalid");
+  		  	break;			  
+  }
+  </pre>
+  Enter any letter
+  <input type="text" name="l" />
+  <input type="button" value="Click here to check" onclick="vowel()"  />
+  <hr>
+  <script>
+  function f1()
+  {
+  c=parseInt(ch.value);
+  switch(c)
+  {
+  case 1: l1=parseFloat(prompt("Enter length ",0));
+  	   	  b1=parseFloat(prompt("Enter breadth ",0));
+		  area=l1*b1;
+  	   	  document.write("Area of Rectangle is ",area);
+  	   	  break;
+  case 2: side=parseFloat(prompt("Enter side ",0));
+  	   	  area=side*side;
+  	   	  document.write("Area of Square is ",area);
+  	   	  break;
+  case 3: radius=parseFloat(prompt("Enter Radius",0));
+  	   	  area = 3.14*radius*radius;
+   	   	  document.write("Area of Circle is ",area);
+		  break;	 
+  default :  document.write("Invalid choice "); 
+  }
+  }
+  </script>
+  Enter 1 Area of Rectangle/ 2 area of Square / 3 area of circle
+  <input type="text" name="ch" />
+  <input type="button" value="Choose an option" onclick="f1()" />
+  <hr />
+  <script>
+  function f2()
+  {
+  f=food.selectedIndex;
+  switch(f)
+  {
+  case 0: document.write("<h1>Main Course</h1><ol><li>Shahi Paneer</li><li>Dal Makhani</li><li>Kadhai Paneer</li></ol>");
+  	   	  break;
+  case 1: document.write("<h1>Breads</h1><ol><li>Tandoori</li><li>Plain Roti</li><li>Naan</li></ol>");
+   	   	  break;
+  case 2: document.write("<h1>Snacks ans starters</h1><ol><li>Veg Kothey</li><li>Pastries</li><li>Sandwiches</li></ol>");
+  	   	  break;
+  case 3: document.write("<h1>Soups</h1><ol><li>Veg manchow</li><li>Tomato</li><li>Hot n Sour</li></ol>");
+  	   	  break;
+  }
+  }
+  </script>
+  <select name="food">
+        <option>a Main course</option>
+  		<option>b Breads</option> 
+		<option>c Snacks</option>
+		<option>d Soups</option>
+  </select>
+  <input type="button" value="Click Here" onclick="f2()"/>
+		
+    
+  </body>
+</html>

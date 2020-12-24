@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Wed, 09 Dec 2020 12:11:31 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<script>
+	function total()
+	{
+	num=parseInt(n.value);// no. of seats
+	if(t[0].checked==1)
+	amt=num*1000;
+	else if(t[1].checked==1)
+		 amt=num*800;
+		 else if(t[2].checked==1)
+		 amt=num*600;
+		 		else if(t[3].checked==1)
+				amt=num*500;
+				else
+				amt=num*400;	 
+
+	alert("Please pay Rs. "+amt);
+	}
+	</script>
+  </head>
+  <body>
+  <h1>Online Ticket Reservation System </h1>
+  Source<input type="text" name="s" value="Delhi" />
+  Destination<input type="text" name="s" value="Sagar" />
+  <hr />
+  Enter Type of seat
+  <input type="radio" name="t" />AC 1 (Rs.1000)
+  <input type="radio" name="t" />AC 2 (Rs.800)
+  <input type="radio" name="t" />AC 3 (Rs.600)
+  <input type="radio" name="t" />Sleeper (Rs.500)	  
+  <input type="radio" name="t" />General (Rs.400)
+  <hr />
+  Number of seats
+  <input type="text" name="n" />
+  <hr />
+  <input type="button" value="Click Here" onclick="total()" />
+  </body>
+</html>

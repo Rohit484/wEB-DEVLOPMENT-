@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Wed, 09 Dec 2020 11:56:43 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<script>
+	function vote()
+	{
+	age=parseInt(a.value);
+	stay_india=parseInt(stay.value);
+	if(age>=18 && nation[0].checked==1 && stay_india>=5)
+	document.write("Congratulations you can vote in India.");
+	else
+	document.write("You can not vote."); 
+	}
+	</script>
+  </head>
+  <body>
+<h1>Check Your Voting Rights</h1>
+Enter Your Age
+<input type="text" name="a" />
+<hr />
+Are you an Indian?
+<input type="radio" name="nation" />Yes 	   nation[0]
+<input type="radio" name="nation" />No		   nation[1]
+<hr />
+How long is your stay in India?
+<input type="text" name="stay" />
+<hr />
+<input type="button" onclick="vote()" />
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="utf-8">
+     <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+     <meta name="dcterms.created" content="Mon, 21 Dec 2020 10:45:58 GMT">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <title>First to second</title>
+     <style>
+   div
+       {width: 400px; height: auto; float: left; padding: 20px;}
+       input[type=text]
+{
+     width: 100%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     display: inline-block;
+     border: 1px  solid #ccc;
+     border-radius: 4px;
+     box-sizing:border-box;
+
+ }
+
+   </style>
+   <script>
+    function c_to_f()
+    {
+      cel1=parsefloat(c.value);
+      far1=(cel1*9/5)+32;
+      f.value=far1;
+}
+function f_to_c()
+{
+       far2=parsefloat(f1.value)
+       cel2=(far2-32)*5/9;
+       c1.value=cel2;
+}
+</script>
+</head>
+<body>
+<div>
+<h1>celsius to fahrenhight</h1>
+<hr />
+<i>Celsius to farenheight, multiply by 1.8 (or9/5) and add 32. </i>
+Enter T(C)<input type="text" name="c" />
+<input type="button" onclick="c_to_f()" value="Click to convert c to f" />
+<input type="text" name="f" />
+<hr />
+</div>
+<div>
+<h1>Fahrenheit to celsius  </h1>
+<hr />
+<i> The temperature T in degree Celsius (c)is equal to the temperature t in degrees fahrenheit(f) minus 32,times 5/9: </i>
+Enter T(F)<input type="text" name="f1" />
+<input type="button" onclick="f_to_c()" value="Click to convert f to c" />
+<input type="text" name="c1" />
+</div>
+</body>
+</html>
