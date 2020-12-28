@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+	<style>
+	div{width:400px;height:auto; float:left;padding:20px;}
+	input[type=text] {
+	  width: 100%;
+	  padding: 12px 20px;
+	  margin: 8px 0;
+	  display: inline-block;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+	  }
+	</style>
+
+	<script>
+	
+	function c_to_perc()
+	{
+	cgpa = parseFloat(c.value);
+	p1 = cgpa * 9.5;
+	per.value=p1;
+	}
+	
+	function perc_to_c()
+	{ 
+	perc2=parseFloat(p2.value);
+	cel2= perc2/9.5;
+	c2.value=cel2;
+	}
+	</script>
+  </head>
+  <body>
+<div>
+<h1>CGPA to Percentage</h1>
+<hr />
+<i>Just multiply your CGPA with 9.5, and the result will be your percentage.</i>
+<br/>Enter CGPA<input type="text" name="c" />
+<input type="button" onclick="c_to_perc()" value="Click to convert CGPA to %age" />
+<input type="text" name="per" />
+<hr /> 
+</div>
+<div>
+<h1>Percentage to CGPA</h1>
+<hr />
+<i>In order to convert Percentage to CGPA (out of 10), divide your percentage by 9.5 and the result will be your CGPA.</i>
+<br/>Enter Percentage <input type="text" name="p2" />
+<input type="button" onclick="perc_to_c()" value="Click to convert %age to CGPA" />
+<input type="text" name="c2" />
+  <hr />
+</div>
+</body>
+</html>
