@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Thu, 07 Jan 2021 11:05:20 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<script>
+	function f1(fnm,lnm)
+	{
+	if(fnm.length>0 && lnm.length>0 )
+	document.getElementById("p1").innerHTML=fnm.toUpperCase();
+	document.getElementById("p2").innerHTML=lnm.toUpperCase();
+
+	}
+	</script>
+  </head>
+  <body>
+Enter Your First Name
+<input type="text" name="fn" />
+Enter Your Last Name
+<input type="text" name="ln" />
+<input type="button" onclick="f1(fn.value,ln.value)" value="Click Here to submit" />
+<table border="1">
+  <tr><!-- Row 1 -->
+       <td>First Name</td>
+     <td><p id="p1"></p></td><!-- Col 1 -->
+  </tr>
+  <tr><!-- Row 2 -->
+       <td>Last Name</td>
+     <td><p id="p2"></p> </td><!-- Col 1 -->
+  </tr>
+  <tr><!-- Row 3 -->
+     <td></td><!-- Col 1 -->
+  </tr>
+</table>
+</body>
+</html>
