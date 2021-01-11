@@ -1,0 +1,45 @@
+<html>
+<head>
+<title></title>
+<style>
+div{
+background-color:#c0e218;
+width:400px;
+height:250px;
+ }
+ #dig{
+ background-color:#db6400;
+ width:300px;
+ height:200px;
+ float:right;
+  }
+</style>
+<script>
+function fun1()
+{
+s1=parseInt(n1.value);
+mi=0.621371;
+s2=s1*mi;
+document.write("Your Convert value is",+s2);
+}
+function fun2()
+{
+s2=parseInt(n2.value);
+m2=1.609344;
+s3=n2*m2;
+document.write("Your miles to kilometer converstion",+s3);
+}
+</script>
+</head>
+<body>
+<div id="dig">
+<h5>Enter the value in KM formet:-</h5><input type="text" name="n1" />
+<input type="button" onClick="fun1()" value="Click here" />
+</div>
+<div>
+<h5>Enter the Miles</h5><input type="text" name="n2" />
+<input type="button" onClick="Fun2()" value="SUBMIT" />
+</div>
+
+</body>
+</html>

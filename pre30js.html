@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Thu, 31 Dec 2020 11:29:40 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<style>
+	.er{color:red; }
+	</style>
+    <script>
+	function f1()
+	{
+	if(isNaN(n1.value))
+	//alert("enter only a number");
+	document.getElementById("p1").innerHTML = "Enter ONLY A NUMBER";
+	document.getElementById("p2").innerHTML = "Enter ONLY A NUMBER";
+	}
+	</script>
+  </head>
+  <body>
+  Enter a number<input type="text" name="n1" />
+    <p id="p1" class="er"></p>
+    Enter a number<input type="text" name="n2" />
+  <p id="p2" class="er"></p>
+  <input type="button" onclick="f1()" value="OK" />
+  </body>
+</html>

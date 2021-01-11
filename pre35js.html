@@ -1,0 +1,36 @@
+<html>
+<head>
+<style></style>
+<script>
+function fun1()
+{
+s1=parseInt(n1.value);
+s2=parseInt(n2.value);
+s3=parseInt(n3.value);
+if(s1>s2 && s1>s3)
+{
+document.write("The first value is greater then another value:-"+s1);
+}
+else if(s2>s1 && s2>s3)
+{
+document.write("The second value is greater then another value:-"+s2);
+}
+else if(s3>s1 && s3>s2)
+{
+
+document.write("The third value is big:-"+s3);
+}
+}
+
+</script>
+</head>
+<body>
+<h5>Enter the First value:-</h5><input type="text" name="n1" />
+<br />
+<h5>  Enter the second value:-</h5><input type="text" name="n2" />
+<br />
+<h5>Enter the third value:</h5><input type="text" name="n3" />
+<input type="button" value="Click here" onClick="fun1()" />
+</body>
+
+</html>

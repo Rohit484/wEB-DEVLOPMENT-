@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Tue, 05 Jan 2021 10:53:03 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <script>
+	function sim_int()
+	{
+	s_int.value = loan(parseInt(p_amt.value),parseInt(rt.value),parseInt(tm.value));
+	amt.value=parseInt(s_int.value)+parseInt(p_amt.value);
+	alert(loan(100,2,1));
+	document.write(loan(50000,7.5,3))
+	}
+	
+	function loan(p,r,t)
+	{
+	si=(p*r*t)/100;
+	return si
+	}
+	
+	</script>
+  </head>
+  <body>
+<h1>Loan Calculator</h1>
+Enter Principle Amount
+<input type="text" name="p_amt" />
+<hr />
+Rate of interest
+<input type="text" name="rt" value="5%" disabled/>
+<hr />
+Time (in Years)
+<input type="text" name="tm" value="3"/>
+<hr />
+<input type="button" value="Calculate" onclick="sim_int()">
+Interest calculated
+<input type="text" name="s_int" /> 
+Total Amount payable
+<input type="text" name="amt" /> 
+  </body>
+</html>

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Tue, 05 Jan 2021 11:10:15 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <script>
+	g=10; //global variable //public
+	//static
+  	function f1(x,y)
+	{
+	s=sum(x,y); // function call	//private variable 
+	n.value=s;
+	}
+	function sum(x,y) // function definition 
+	{
+	 return x+y; // return statement 
+	}
+	function f2()
+	{
+	a1=parseInt(a.value);
+	b1=parseInt(b.value);
+	n.value=a1-b1;
+	}
+	function f3()
+	{
+	g++;
+	alert(g);
+	if(g>15)
+	alert("Invalid Users");
+	}
+</script>
+  </head>
+  <body>
+<h2>Add</h2>
+Enter 1st number<input type="text" name="a"/>
+Enter 2nd number<input type="text" name="b"/>
+Result
+<input type="text" name="n">
+<input type="button" value="ADD" onclick="f1(parseInt(a.value),parseInt(b.value))" />
+<input type="button" value="Subtract" onclick="f2()"/>
+<input type="button" value="Click here" onclick="f3()"/>
+  </body>
+</html>
