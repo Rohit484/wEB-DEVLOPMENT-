@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Tue, 05 Jan 2021 11:27:28 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<script>
+	names= new Array("Apple", "Mango","Banana");
+	document.write("<h3>List of fruits</h3>",names);
+	function change_names(names)
+	{
+	names[0]="Orange";
+	}
+	function display_names()
+	{
+	document.write("<h3>List of fruits</h3>");
+	document.write("<ul>");
+	for(i=0;i<names.length;i++)
+	{
+	 document.write("<li>",names[i],"</li>");
+	 }
+	 document.write("</ul>");
+	}
+	
+	change_names(names);
+	{
+	document.write("<h3>List of fruits</h3>");
+	document.write("<ul>");
+	for(i=0;i<names.length;i++)
+	{
+	document.write("<li>",names[i],"</li>");
+	}
+	document.write("</ul>");
+	}
+	display_names(names);
+	
+	</script>
+  </head>
+  <body>
+
+  </body>
+</html>

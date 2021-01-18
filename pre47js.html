@@ -1,0 +1,34 @@
+<html>
+<head>
+<title></title>
+<style>
+#imgs{width:200px;
+height:200px; }
+</style>
+<script>
+img_arr=new Array(3);
+for(i=0;i<3;i++)
+{
+ img_arr[i]=new Image();
+}
+var i=0;
+function change_pics()
+{
+ img_arr[0].src="D:\World_forest project\Project img file\Logo.jpg";
+ img_arr[1].src="D:\World_forest project\Project img file\pic1.jpg";
+ img_arr[2].src="D:\World_forest project\Project img file\pic3.jpg";
+ document.getElementById("imgs").src=img_arr[i].src;
+ i++;
+ if(i==3)
+ i=0;
+}
+
+</script>
+</head>
+<body ocClick="setInterval('change_pics()',2000)" >
+<img src="D:\World_forest project\Project img file\pic7.jpg" id="imgs" />
+
+
+</body>
+
+</html>

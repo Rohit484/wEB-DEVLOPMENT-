@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Wed, 13 Jan 2021 14:50:20 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<script>
+	i=0;
+function func1()
+{
+	clrs_arr = new Array("#FFFF80","#00FF80","#008040","#FF8000");
+	document.getElementById("band").style.backgroundColor=clrs_arr[i];
+	i++;
+	if(i>3)
+	i=0;
+}
+	</script>
+	<style>
+	#band{width:200px;height:200px;border: red dashed 5px; border-radius:15px;}
+	</style>
+  </head>
+  <body onclick="setInterval('func1()',1000)">
+  <div id="band"></div>
+  </body>
+</html>

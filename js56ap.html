@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Fri, 15 Jan 2021 11:18:03 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<script>
+  
+	function show_nm(){  
+	name=window.document.form1.name1.value;  
+	alert("Welcome: "+name);  
+	}  
+	</script>  
+  
+	<form name="form1">  
+	Enter Your Name:<input type="text" name="name1"/>  
+	<input type="button" onclick="show_nm()" value="Show name"/>  
+	</form> 
+	<script>
+	function getElement()
+		{
+	new_window = window.open("");//new
+	new_window.document.open();//new
+	var xyz = document.getElementsByName("ab");//old 
+	new_window.document.write("Length of Your Name is " + xyz.length);
+	new_window.document.close();
+		}
+	</script>
+  </head>
+  <body>
+<h3>JavaScript Document Object Methods Example</h3>
+First Name:<input type="text" name="ab" size="20"><br/>
+Middle Name:<input type="text" name="ab2" size="20"><br/>
+Last Name:<input type="text" name="ab3" size="20"><br/>
+<input type="button" onclick="getElement()" value="Calculate Length">
+  </body>
+</html>

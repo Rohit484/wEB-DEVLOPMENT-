@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Wed, 13 Jan 2021 15:14:45 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+	<style>#imgs{width:200px;height:200px; }</style>
+	<script>
+	img_arr = new Array(3);
+	for(i=0;i<3;i++)
+	{
+	img_arr[i]= new Image();
+	}
+	var i=0;
+	function change_pics()
+	{
+	img_arr[0].src="..//images//teddy2.jpg";
+	img_arr[1].src="..//images//cropped-Logo.png";
+	img_arr[2].src="..//images//baking-business-ideas.jpg";
+	
+	document.getElementById("imgs").src = img_arr[i].src;
+	i++;
+	if(i==3)
+	i=0;
+	}
+	</script>
+  </head>
+  <body onclick="setInterval('change_pics()',2000)">
+  <img src="../images/teddy1.jpg" id="imgs"/>
+ 
+  </body>
+</html>

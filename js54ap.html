@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Fri, 15 Jan 2021 10:28:07 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <script>
+	function show_details()
+	{
+	m=movie.selectedIndex;
+	switch(m)
+	{
+case 0 :window.open("../movie/ginny.html","_blank","toolbar=yes,location=yes,directories=no, status=yes,menubar=yes,scrollbars=yes,resizable=no,copyhistory=yes,width=400,height=300");
+			 break;
+	case 1 :window.open("../movie/panga.html","_blank","toolbar=yes,location=yes,directories=no, status=yes,menubar=yes,scrollbars=yes,resizable=no,copyhistory=yes,width=400,height=300");
+			 break;
+	case 2 :window.open("../movie/chappak.html","_blank","toolbar=yes,location=yes,directories=no, status=yes,menubar=yes,scrollbars=yes,resizable=no,copyhistory=yes,width=400,height=300");
+			 break;
+	}
+	}
+	</script>
+  </head>
+  <body>
+Select Your Favourite Movie for details
+<select name="movie">
+<option>Ginny Weds Sunny</option>
+<option>Panga</option>
+<option>Chappak</option>
+<option>Guilty</option>
+<option>Jai Mummy Di</option>
+<option>Dil Bechara</option>
+<option>Tanhaji</option>
+</select>
+<input type="button" onclick="show_details()" value="Click here">
+  </body>
+</html>
