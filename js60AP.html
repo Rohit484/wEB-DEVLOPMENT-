@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Tue, 19 Jan 2021 11:17:18 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    
+  </head>
+  <body>
+
+<b><h1>Property of JavaScript Screen Object</h1></b>
+<p>There are many properties of screen object that returns information of the browser.</p>
+<pre>
+Property	Description
+width		returns the width of the screen
+height		returns the height of the screen
+availWidth	returns the available width
+availHeight	returns the available height
+colorDepth	returns the color depth
+pixelDepth	returns the pixel depth.
+</pre>
+<script>  
+document.write("<br/>screen.width: "+screen.width);  
+document.write("<br/>screen.height: "+screen.height);  
+document.write("<br/>screen.availWidth: "+screen.availWidth);  
+document.write("<br/>screen.availHeight: "+screen.availHeight);  
+document.write("<br/>screen.colorDepth: "+screen.colorDepth);  
+document.write("<br/>screen.pixelDepth: "+screen.pixelDepth);  
+</script>  
+<h1>The HTMLCollection Object</h1>
+<p>Loop through each HTML element on this page, and write its tag name:</p>
+<script>
+x = document.getElementsByTagName("*");
+l = x.length;
+for (i = 0; i < l; i++) {
+  document.write(x[i].tagName + "<br/>");
+}
+</script>
+<h1>HTMLCollection item() Method</h1>
+<p>The item() method returns the element at the specified index.</p>
+<p>Click the button to return the content of the first P element on this page:</p>
+<input type="button" onclick="f1()" value="Alert innerHTML of P"/>
+<script>
+function f1() {
+  var x = document.getElementsByTagName("P");
+  alert(x.item(0).innerHTML);
+}
+</script>
+<h1>HTMLCollection namedItem() Method</h1>
+<p id="p1">The namedItem() method returns the 
+element with the specified ID or name.</p>
+<p>Click the button to return the content of the P element with ID "myElement":</p>
+<input type="button" onclick="f2()" value="Text of P"/>
+<script>
+function f2() {
+  var x = document.getElementsByTagName("P").namedItem("p1");
+  alert(x.innerHTML);
+}
+//window.status = "Some text in the status bar!!";
+</script>
+<h2>Style method</h2>
+<input type="button"  onclick="f3()" value="click here"/>
+<div id="myDIV">
+<p>JavaScript methods are actions that can be performed on objects. A JavaScript method is a property containing a function definition. A method is a function that belongs to a class. In JavaScript, however, a method is a function that belongs to an object. Everything in JavaScript is an object; a function is an object; an Array is an object.</p>
+</div>
+
+<script>
+function f3() {
+  document.getElementById("myDIV").style.columns = "200px 3";
+}
+</script>
+<script>
+var w;
+function openwindow() {
+  w = window.open('','', 'width=100,height=100');
+  w.focus();
+}
+
+function myFunction() {
+  w.resizeBy(150, 200);
+  w.focus();
+}
+
+</script>
+</head>
+<body>
+
+<input type="button" onclick="openwindow()" value="Create window"/>
+<input type="button" onclick="myFunction()" value="Resize window"/>
+<script>
+var myWindow;
+function openWin() {
+  myWindow=window.open("", "", "width=400, height=200");
+}
+function moveWin() {
+  myWindow.moveBy(250, 250)
+  myWindow.focus()
+}
+</script>
+</head>
+<body>
+<input type="button" value="Open myWindow" onclick="openWin()" />
+<br><br>
+<input type="button" value="Move myWindow" onclick="moveWin()" />
+<script>
+function newDoc() {
+  window.location.assign("js59.html")
+}
+</script>
+</head>
+<body>
+
+<input type="button" value="Load new document" onclick="newDoc()">
+  </body>
+</html>
