@@ -1,0 +1,84 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<h1>Objects in JavaScript</h1>
+<p>Objects in JavaScript, just as in many other 
+programming languages,can be compared to objects in real life. 
+The concept of objects in 
+JavaScript can be understood with real life, tangible objects.</p>
+
+<p><b>Creating Objects in JavaScript.</b> <br>
+There are 3 ways to create objects. 
+<ul>
+    <li>By object literal </li>
+    <li>By creating instance of Object directly (using new keyword) </li>
+    <li>By using an object constructor (using new keyword)</li>
+</ul> </p>
+<p> JavaScript object has properties associated with it. 
+A property of an object can be explained as a 
+variable that is attached to the object. 
+Object properties are basically the same as ordinary 
+JavaScript variables, except for the attachment to objects. 
+The properties of an object define the characteristics 
+of the object. You access the properties of an object 
+with a simple dot-notation:
+<b> objectName.propertyName</b></p>    
+<hr />
+
+<h2>Direct Method</h2>
+<script>
+ dr_details=new Object();
+ dr_details.id=1001;
+ dr_details.fname="Amitabh";
+ dr_details.lname="Jain";
+ dr_details.speciality="Cardio";
+ document.write(dr_details.id ,"Dr.", dr_details.fname ,dr_details.lname, " ", dr_details.speciality,"<br />");
+</script>
+<b><script>
+cake={id:1145,name:"Red Velvert",cost:1500} 
+document.write(cake.id + "" +cake.name + "" cake.cost);
+cake1={id:1234, name:"French vanilla",cost:1200}; 
+
+</script></b>
+<script>
+ var actors=
+ {
+   firstName: "Alia",
+   lastName: "Bhatt",
+   gender: "Female",
+   movie: "Razi",
+   age: 25,
+   getFullName: function()
+   { 
+     return this.firstName + ' ' + this.lastName + this.movie
+   }
+ };
+ document.write("<br />  The details of",actor.getFullName());
+</script>
+<h1>Javascript Objects</h1>
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+<p id="p4"></p>
+<p id="p5"></p>
+<script>
+  var person=
+  {
+    firstName: "Ranbir",
+	lastName: "Kapoor",
+	age: 30,
+	getFullName: function()
+	{
+	 return this.firstName + ' ' + this.lastName
+	}
+  };
+  document.getElementById("p1").innerHTML=person.firstName;
+  document.getElementById("p2").innerHTML=person.lastName;
+  document.getElementById("p3").innerHTML=person["firstName"];
+  document.getElementById("p4").innerHTML=person["lastName"];
+  document.getElementById("p5").innerHTML=person.getFullName();
+</script>
+</body>
+</html>
