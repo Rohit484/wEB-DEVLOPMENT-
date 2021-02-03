@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Wed, 27 Jan 2021 10:51:14 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+</head>    
+  <script>
+     function f1_time()
+     {
+          var d = new Date();
+          var ty = d.getHours() + ":"+d.getMinutes()+":"+d.getSeconds();
+          document.frmtym.timetxt.value=ty;
+          setInterval("f1_time()",1000)
+     }
+     </script>
+
+<body onload="f1_time()">
+     <center><h2>Displaying Time</h2>
+          <form name="frmtym">
+               <input type="text" name="timetxt" size="8">
+          </form>
+     </center>
+<hr />
+<script>  
+	function f2_validateform()
+    {  
+	  var uname=document.myform.name.value;  
+      var upassword=document.myform.password.value;  
+      if (uname==null || uname=="")
+	  {  
+      alert("Name cannot be left blank");  
+      return false;  
+      }
+      else if(upassword.length<6)
+      {  
+      alert("Password must be at least 6 characters long.");  
+      return false;  
+      }  
+   }  
+   function f2_emailvalidation()
+   	{
+    var a=document.myform.email.value
+    if (a.indexOf("@")==-1)
+    {
+    alert("Please enter valid email address")
+    document.myform.email.focus()
+    }
+    }
+    </script>  
+  
+  <form name="myform" method="post" action="validpage.html" onsubmit="return f2_validateform()">  
+   Email: <input type="text" size="20" name="email" onblur="f2_emailvalidation()"><br>
+   User Name: <input type="text" name="name"><br>  
+   Password: <input type="password" name="password"><br>  
+   <input type="submit" value="Submit" >  
+  </form>
+<hr />  
+<script>
+function f3_coords(event) {
+ document.getElementById("hd2").innerHTML = "X= " + event.clientX + "<br>Y= " + event.clientY;
+}
+</script>
+<p onmouseDown="f3_coords(event)">
+Click this paragraph to display the x and y 
+coordinates of the mouse pointer.</p>
+<h2 id="hd2"></h2>	
+<hr />
+ <script>
+function f4() {
+  var w = window.outerWidth;
+  var h = window.outerHeight;
+  var txt = "Window size: width=" + w + ", height=" + h;
+  document.getElementById("p2").innerHTML = txt;
+}
+</script>
+<body onresize="f4()">
+<p>Try to resize the browser window.</p>
+<p id="p2"> </p>
+<hr />
+<script>
+function f5_bgChg(bg) {
+  document.body.style.background = bg;
+}
+</script>
+
+<h2>Change background color</h2>
+<p>Mouse over the squares!</p>
+
+<table style="width:300px;height:100px">
+  <tr>
+    <td onmouseOver="f5_bgChg(this.style.backgroundColor)" 
+    onmouseout="f5_bgChg('transparent')"
+    style="background-color:Khaki"><b>A</b>
+    </td>
+    <td onmouseover="f5_bgChg(this.style.backgroundColor)" 
+    onmouseout="f5_bgChg('transparent')"
+    style="background-color:PaleGreen"><b>B</b>
+    </td>
+    <td onmouseover="f5_bgChg(this.style.backgroundColor)" 
+    onmouseout="f5_bgChg('transparent')"
+    style="background-color:Silver"><b>C</b>
+    </td>
+  </tr>
+</table>
+<hr />
+<p id="p3">This is a paragraph.This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph. This is a paragraph.</p>
+<input type="button" value="VISIBILITY ON"
+onclick="document.getElementById('p3').style.visibility='visible'">
+<input type="button" value="VISIBILITY OFF" 
+onclick="document.getElementById('p3').style.visibility='hidden'">
+<hr />
+<script>
+function f6_txt() {
+  s=document.getElementById("song1");
+  x = document.getElementById("song_list");
+  x.options[x.selectedIndex].text = s.value;
+  alert(document.getElementById("song_list").length);
+}
+</script>
+<form>
+Select your favourite Song:
+<select id="song_list">
+  <option>Teri Mitti</option>
+  <option>Burj Khalifa</option>
+  <option>Ae Mere Dil</option>
+  <option>Tare Ginn</option>
+</select>
+<br><br>
+"Sawan mein lag gyi aag"
+<input type="text" id="song1" />
+<input type="button" onclick="f6_txt()" value="Create New List">
+</form>
+<script>
+function f7_disable() {
+  document.getElementById("song_list").disabled=true;
+}
+function f7_enable() {
+  document.getElementById("song_list").disabled=false;
+}
+function f7_remove() {
+  var x = document.getElementById("song_list");
+  x.remove(x.selectedIndex);
+  alert(document.getElementById("song_list").length);
+}
+function f7_add()
+{
+ s=document.getElementById("song2");
+ var x=document.getElementById("song_list");
+ var option = document.createElement("option");
+ option.text = s.value;
+ x.add(option);
+ alert(document.getElementById("song_list").length);
+ }
+</script>
+Add Song<input type="text" id="song2" />
+<input type="button" onclick="f7_disable()" value="Disable list">
+<input type="button" onclick="f7_enable()" value="Enable list">
+<input type="button" onclick="f7_remove()" value="Remove song">
+<input type="button" onclick="f7_add()" value="Add to List" />
+</form>
+<hr />
+<style>
+.droptarget { float: left;  width: 100px;  height: 35px;
+  margin: 15px;  padding: 10px;  border: 1px solid #aaaaaa;
+}
+</style>
+<p>Drag the p element back and forth between the two rectangles.</p>
+<div class="droptarget" 
+ondrop="f8_drop(event)" ondragOver="f8_allowDrop(event)">
+<p ondragStart="f8_dragStart(event)" 
+ondrag="f8_dragging(event)" 
+draggable="true" id="dragtarget">Drag This!</p>
+</div>
+
+<div class="droptarget" 
+ondrop="f8_drop(event)" ondragover="f8_allowDrop(event)"></div>
+<p style="clear:both;">
+<p id="show_p1"></p>
+
+<script>
+function f8_dragStart(event) {
+event.dataTransfer.setData("Text", event.target.id);
+}
+
+function f8_dragging(event) {
+document.getElementById("show_p1").innerHTML = "The p element is being dragged";
+}
+
+function f8_allowDrop(event) {
+event.preventDefault();
+}
+
+function f8_drop(event) {
+event.preventDefault();
+var data = event.dataTransfer.getData("Text");
+event.target.appendChild(document.getElementById(data));
+document.getElementById("show_p1").innerHTML = "The p element was dropped";
+}
+</script>
+<p>The <b>drag event</b> is fired every few hundred milliseconds 
+as an element or text selection is being dragged by the user.</p>
+<p>The <b>drop event</b> is fired when an element or 
+text selection is dropped on a valid drop target.</p>
+
+<hr />
+<img src="some_pic.jpg" onerror="f9()">
+<p>A function is triggered if an error occurs when loading the image. 
+The function shows an alert box with a text.</p>
+
+<script>
+function f9() {
+  alert("Error occured while downloading this image.");
+}
+</script>
+<hr />
+
+
+</body>
+</html>

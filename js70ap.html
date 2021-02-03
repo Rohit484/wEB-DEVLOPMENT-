@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Tue, 02 Feb 2021 10:59:01 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+  </head>
+  <body>
+  <h1>Canvas</h1>
+<p>A canvas consists of a drawable region defined in HTML code with 
+height and width attributes. JavaScript code may access the area 
+through a full set of drawing functions similar to those of 
+other common 2D APIs, thus allowing for dynamically generated 
+graphics. Some anticipated uses of canvas include building 
+graphs, animations, games, and image composition.
+</p>
+<style>
+canvas{border:medium double red; margin:4px;}
+</style>
+<canvas id="canvs" width="300" height="300"></canvas>
+<script>
+var c = document.getElementById("canvs");
+var ctx = c.getContext("2d");
+ctx.moveTo(0, 0);
+ctx.lineTo(300, 300);
+ctx.lineWidth=5;
+ctx.strokeStyle="#afafaf";
+ctx.stroke();
+</script>
+<hr />
+<script>
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+//arc(x,y,radius,startAngle,endAngle,anticlockwise)
+ctx.stroke();
+</script>
+<hr />
+<script>
+var c = document.getElementById("canvs");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "green";//ctx.fillStyle = "#FF0000";  
+ctx.fillRect(100, 100, 250, 100);
+//ctx.strokeStyle="#000000";
+</script>
+<hr />
+<script>
+var c = document.getElementById("canvs");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillText("Typing on the canvas",20,75);
+</script>
+<hr />
+<script>  
+var c = document.getElementById("canvs");  
+var ctx = c.getContext("2d");  
+ctx.font = "30px tahoma";  
+ctx.strokeText("Over the Canvas",10,50);  
+</script>  
+<hr />
+<script>
+  var c = document.getElementById("canvs")
+  var cx =c.getContext("2d");
+  cx.beginPath();
+  cx.moveTo(100, 250);
+  // control=(60,10) goal=(90,90)
+  cx.quadraticCurveTo(80, 30, 120, 120);
+  //quadratic curve
+  cx.bezierCurveTo(140,10,380,10,280,100);
+  //bezier curve
+  cx.lineTo(80, 30);
+  cx.closePath();
+  cx.stroke();
+</script>
+<hr />
+<style>
+#test {width:100px; height:100px; margin: 0px auto; } </style>
+<script>
+window.onload= function()
+{
+var canvas2 = document.getElementById("canvs3");
+var ctx = canvas2.getContext("2d");
+x=70;
+y=50;
+w=200;
+h=250;
+var img1=new Image();
+img1.onload=function(){
+ctxt=drawImage(img1,x,y,w,h);
+};
+img1.src = "..\images\pattern.jpg";
+};
+/*function drawShape() 
+{
+var canvas2 = document.getElementById("canvs3");
+var ctx = canvas2.getContext("2d");
+var img = new Image();
+img.src = "D:\HTML\images\pattern.jpg";
+img.onload = function() {
+		   var ptrn = ctx.createPattern(img,"repeat");
+           ctx.fillStyle = ptrn;
+           ctx.fillRect(0,0,150,150);
+          }
+ }*/
+</script>
+ <div id = "test" onload = "drawShape()">
+ <canvas id = "canvs3"></canvas>
+ </div>
+		 
+  </body>
+</html>

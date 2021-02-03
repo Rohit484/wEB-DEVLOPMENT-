@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Thu, 28 Jan 2021 17:04:24 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    
+  </head>
+  <body>
+<style>
+	   .div_style { float: left;  width: 300px;  height: 450px;
+ 	    margin: 15px;  padding: 10px;  border: 1px solid #aaaaaa;
+}
+</style>
+<h1>Drag and Drop elements</h1>
+<div class="div_style" 
+ondrop="drop(event)" 
+ondragOver="allowDrop(event)">
+<img src="../images/fox.jpg" width="200" height="200" 
+ondragStart="dragStart(event)" 
+ondrag="dragging(event)" 
+draggable="true" id="target1"/>
+<img src="../images/bear.jpg" width="200" height="200" 
+ondragStart="dragStart(event)" 
+ondrag="dragging(event)" 
+draggable="true" id="target2"/>
+</div>
+
+<div class="div_style" 
+ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<p style="clear:both;"><p id="p1"></p>
+
+<script>
+function dragStart(event) {
+event.dataTransfer.setData("Text", event.target.id);
+}
+
+function dragging(event) {
+document.getElementById("p1").innerHTML = "drag the image";
+}
+
+function allowDrop(event) {
+event.preventDefault();
+}
+
+function drop(event) {
+event.preventDefault();
+var data = event.dataTransfer.getData("Text");
+event.target.appendChild(document.getElementById(data));
+document.getElementById("p1").innerHTML = "drop the image";
+}
+</script>
+  </body>
+</html>

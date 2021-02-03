@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+   </head>
+<body>
+<h2>Using For/In Loop</h2>
+<p>The for/in statement loops through the properties of an object.</p>
+<p id="para1"></p>
+<script>
+var message = " ";
+var player = {fname:"Virat", lname:"Kohli", age:32};
+var a; 
+for (a in player) {
+  message += player[a] + " ";
+}
+document.getElementById("para1").innerHTML = message;
+</script>
+<hr />
+<h2>Using For/Of Loop</h2>
+<p>The for/of statement loops through the values of an iterable object.</p>
+<script>
+var mobile = new Array(3);
+mobile= ["iPhone", "Vivo", "Mi"]; // array
+var b;
+for (b of mobile) 
+{
+  document.write(b , "<br >");
+}
+</script>
+<hr />
+<h2>JavaScript For/Of Loop</h2>
+<p>The for/of statement loops through the values of an iterable object.</p>
+<script>
+var txt = "I love Scripting with JS"; //string
+var x;
+for (x of txt) {
+  document.write(x , "<br >");
+}
+</script>
+<hr />
+<h2>JavaScript Array.forEach()</h2>
+<p>Calls a function once for each array element.</p>
+<p id="p1"></p>
+<script>
+var txt = " ";
+var numbers = [45, 4, 9, 16, 25];
+numbers.forEach(f1);
+document.getElementById("p1").innerHTML = txt;
+function f1(value, index, array) {
+  txt = txt + value + "<br>"; 
+}
+</script>
+<h2>JavaScript Array.forEach()</h2>
+<p>Calls a function once for each array element.</p>
+<p id="p2"></p>
+<script>
+var txt = "";
+var numbers = [45, 4, 9, 16, 25];
+numbers.forEach(f2);
+document.getElementById("p2").innerHTML = txt;
+
+function f2(value) {
+  txt = txt + value + "<br>"; 
+}
+</script>
+<h2>JavaScript Array.map()</h2>
+<p>Creates a new array by performing a function on each array element.</p>
+<p id="p3"></p>
+
+<script>
+var numbers1 = [45, 4, 9, 16, 25];
+var numbers2 = numbers1.map(f3);
+document.getElementById("p3").innerHTML = numbers2;
+
+function f3(value) {
+  return value * 2;
+}
+</script>
+<h2>JavaScript Array.filter()</h2>
+<p>Creates a new array with all array elements that passes a test.</p>
+<p id="p4"></p>
+
+<script>
+var numbers = [45, 4, 9, 16, 25];
+var over18 = numbers.filter(f4);
+document.getElementById("p4").innerHTML = over18;
+function f4(value) {
+  return value > 18;
+}
+</script>
+  </body>
+</html>

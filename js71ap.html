@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Wed, 03 Feb 2021 10:53:20 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    
+ </head>
+GEO LOCATION - A feature that determines the current of the user on devices.
+single point that has 2 components: latitude and longitude.
+GPS - global positioning system
+IP Address- unique id for the device we are using
+user input- request for location information
+w3c - world wide web console - geolocation API
+<body>
+<input type="button" onclick="getLocation()" value="get Current position"/>
+<p id="p1"></p>
+<script>
+var locas = document.getElementById("p1");
+function getLocation() {
+  if (window.navigator.geolocation) 
+  {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    locas.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  locas.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+<hr />
+<input type="button" onclick="getLocation2()" value="watch position"/>
+<p id="p2"></p>
+<script>
+var x = document.getElementById("p2");
+function getLocation2() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition2);// this gives information about user's 
+	//position at regular interval
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+   
+function showPosition2(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+<hr/>
+<script>
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      alert("User denied the request for Geolocation.");
+      break;
+    case error.POSITION_UNAVAILABLE:
+      alert("Location information is unavailable.");
+      break;
+    case error.TIMEOUT:
+      alert("The request to get user location timed out.");
+      break;
+    case error.UNKNOWN_ERROR:
+      alert("An unknown error occurred.");
+      break;
+  }
+}
+</script>
+<hr />
+
+<p>The HTML Geolocation API is used to get the geographical position of a user.</p>
+<input type="button" onclick="get_map()" value="Find where am I?"/>
+<div id="mapholder1"></div>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script>
+
+var locas2=document.getElementById("p3");
+function get_map()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(show_map,showError);
+    }
+  else{locas2.innerHTML="Geolocation is not supported by this browser.";}
+  }
+
+function show_map(position)
+  {
+  var lat=position.coords.latitude;
+  var lon=position.coords.longitude;
+  var latlon = new google.maps.LatLng(lat, lon);
+  var mapholder=document.getElementById("mapholder1");
+    mapholder.style.height="300px";
+  	mapholder.style.width="80%";
+
+  var myOptions={
+  center:latlon,zoom:14,
+  mapTypeId:google.maps.MapTypeId.ROADMAP,
+  mapTypeControl:false,
+  navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+  };
+  var map=new google.maps.Map(document.getElementById("mapholder1"),myOptions);
+  var marker=new google.maps.Marker({position:latlon,map:map,title:"I am here!"});
+  }
+
+function showError(error)
+  {
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      locas2.innerHTML="User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      locas2.innerHTML="Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      locas2.innerHTML="The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      locas2.innerHTML="An unknown error occurred."
+      break;
+    }
+  }
+</script>
+<hr>
+  </body>
+</html>
