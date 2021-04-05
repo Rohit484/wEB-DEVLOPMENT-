@@ -1,0 +1,78 @@
+                                            ul {
+                                                list-style-type: none;
+                                                margin: 0;
+                                                padding: 0;
+                                                overflow: hidden;
+                                                background-color: #2f5d62;
+                                            }
+                                            
+                                            li {
+                                                float: left;
+                                            }
+                                            
+                                            li a {
+                                                display: block;
+                                                color: white;
+                                                text-align: center;
+                                                padding: 14px 16px;
+                                                text-decoration: none;
+                                            }
+                                            
+                                            li a:hover {
+                                                background-color: #e4bad4;
+                                            }
+                                            
+                                            body {
+                                                background-color: royalblue;
+                                            }
+                                            /*
+    Comment 
+*/
+                                            
+                                            li a,
+                                            .drop {
+                                                display: inline-block;
+                                                color: white;
+                                                text-align: center;
+                                                padding: 14px 16px;
+                                                text-decoration: none;
+                                            }
+                                            
+                                            li a:hover,
+                                            .dropdown:hover .drop {
+                                                background-color: #ccffbd;
+                                            }
+                                            
+                                            li.dropdown {
+                                                display: inline-block;
+                                            }
+                                            
+                                            .parts {
+                                                display: none;
+                                                position: absolute;
+                                                background-color: #f9f9f9;
+                                                min-width: 160px;
+                                                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                                                z-index: 1;
+                                            }
+                                            
+                                            .parts a {
+                                                color: black;
+                                                padding: 12px 16px;
+                                                text-decoration: none;
+                                                display: block;
+                                                text-align: left;
+                                            }
+                                            
+                                            .parts a:hover {
+                                                background-color: #f1f1f1;
+                                            }
+                                            
+                                            .dropdown:hover .parts {
+                                                display: block;
+                                            }
+                                            
+                                            .marq {
+                                                padding-top: 15px;
+                                                padding-bottom: 15px;
+                                            }
