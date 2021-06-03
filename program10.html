@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let no = Number(prompt("Enter The Values for you want to find our"))
+        for (let num = 1; num <= no; num++) {
+            let FindForThree = num % 3;
+            let FindForFive = num % 5;
+            if (FindForThree == 0)
+                document.write("<br>", "Fizz");
+            //document.write("<br>");
+            else if (FindForThree == 0)
+                document.write("<br>", "Buzz");
+            //document.write("<br");
+            else if ((FindForThree == 0) && (FindForFive == 0))
+                document.write("<br>", "FuzzBuzz");
+            //document.write("<br>");
+            else
+                document.write(" <br>", num);
+
+
+        }
+    </script>
+</body>
+
+</html>
